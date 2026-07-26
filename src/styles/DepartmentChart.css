@@ -1,0 +1,11 @@
+.department-chart {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.department-chart h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+}

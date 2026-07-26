@@ -1,0 +1,110 @@
+.employee-form-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 8px 24px rgba(15,23,42,.08);
+    max-width:800px;
+    margin:30px auto;
+}
+
+.employee-form-card h2{
+    font-size:28px;
+    color:#1e293b;
+    margin-bottom:30px;
+    font-weight:700;
+}
+
+.employee-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-size:15px;
+    font-weight:600;
+    color:#475569;
+}
+
+.form-group input,
+.form-group select{
+    padding:14px 16px;
+    border:1px solid #dbe4ee;
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+    background:#fff;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+.full-width{
+    grid-column:1 / -1;
+}
+
+.form-buttons{
+    grid-column:1 / -1;
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:10px;
+}
+
+.cancel-btn{
+    background:#f1f5f9;
+    color:#475569;
+    border:none;
+    padding:13px 22px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cancel-btn:hover{
+    background:#e2e8f0;
+}
+
+.save-btn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:13px 24px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(37,99,235,.25);
+}
+
+@media(max-width:768px){
+
+    .employee-form{
+        grid-template-columns:1fr;
+    }
+
+    .form-buttons{
+        justify-content:center;
+    }
+
+    .employee-form-card{
+        padding:25px;
+    }
+
+}

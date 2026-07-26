@@ -1,0 +1,29 @@
+.department-list{
+    padding:30px;
+}
+
+.department-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.department-header h1{
+    font-size:28px;
+    color:#1f2937;
+}
+
+.add-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.add-btn:hover{
+    background:#1d4ed8;
+}

@@ -1,0 +1,142 @@
+import { useState } from "react";
+import { FaCamera } from "react-icons/fa";
+import axios from "axios";
+import "../../styles/Profile.css";
+
+
+const ProfilePhoto = ({ profile, setProfile }) => {
+
+
+  const [preview, setPreview] = useState(
+    profile?.profileImage
+        ? `http://localhost:8082/uploads/profile/${profile.profileImage}`
+        : null
+);
+
+    const uploadImage = async(e)=>{
+
+
+        const file = e.target.files[0];
+
+
+        if(!file){
+            return;
+        }
+
+
+        const formData = new FormData();
+
+        formData.append(
+            "file",
+            file
+        );
+
+
+
+        try{
+
+
+            const response = await axios.post(
+                "http://localhost:8082/api/profile/upload-image",
+                formData,
+                {
+                    headers:{
+                        Authorization:
+                        `Bearer ${localStorage.getItem("token")}`,
+
+                        "Content-Type":
+                        "multipart/form-data"
+                    }
+                }
+            );
+
+            setPreview(
+                response.data.imageUrl
+            );
+
+
+
+            const updatedProfile = await axios.get(
+    "http://localhost:8082/api/profile",
+    {
+        headers:{
+            Authorization:
+            `Bearer ${localStorage.getItem("token")}`
+        }
+    }
+);
+
+
+setProfile(updatedProfile.data);
+
+
+        }
+        catch(error){
+
+            console.error(
+                "Image upload failed",
+                error
+            );
+
+        }
+
+
+    };
+
+
+
+    return (
+
+        <div className="profile-photo-wrapper">
+
+
+            <img
+
+                src={
+                    preview
+                    ?
+                    preview
+                    :
+                    `https://ui-avatars.com/api/?name=${profile.fullName}`
+                }
+
+                className="profile-photo"
+
+                alt="profile"
+
+            />
+
+
+
+            <label className="camera-btn">
+
+
+                <FaCamera />
+
+
+                <input
+
+                    type="file"
+
+                    accept="image/*"
+
+                    onChange={uploadImage}
+
+                    hidden
+
+                />
+
+
+            </label>
+
+
+
+        </div>
+
+
+    );
+
+};
+
+
+export default ProfilePhoto;

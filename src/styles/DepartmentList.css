@@ -1,0 +1,35 @@
+.department-list {
+    padding: 30px;
+    background: #f5f7fb;
+    min-height: 100vh;
+}
+
+.department-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.department-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.add-department-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.add-department-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}

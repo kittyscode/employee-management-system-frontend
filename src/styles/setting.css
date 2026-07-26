@@ -1,0 +1,631 @@
+.settings-page{
+
+    padding:30px;
+    background:#f8fafc;
+    min-height:100vh;
+
+}
+
+
+.settings-page h1{
+
+    font-size:32px;
+    margin-bottom:25px;
+
+}
+
+
+
+.settings-card{
+
+    
+
+background:var(--card);
+
+color:var(--text);
+
+border:1px solid var(--border);
+
+   
+    padding:28px;
+    min-height:220px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.settings-card h2{
+
+    margin-bottom:25px;
+
+}
+
+
+
+.setting-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 0;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+
+.setting-item h3{
+
+    margin:0;
+
+}
+
+
+.setting-item p{
+
+    color:#64748b;
+
+}
+
+
+
+.setting-item button{
+
+    padding:12px 22px;
+font-size:15px;
+font-weight:600;
+border-radius:12px;
+transition:.3s ease;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+.setting-item button:hover{
+
+    background:#1d4ed8;
+
+}
+.settings-page{
+
+padding:30px;
+
+background:#f8fafc;
+
+min-height:100vh;
+
+}
+
+
+
+.settings-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+
+
+.settings-card{
+
+
+background:white;
+
+  padding:28px;
+    min-height:220px;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+
+transition:.3s;
+
+}
+
+
+
+.settings-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+.settings-card h2{
+
+font-size:20px;
+
+}
+
+
+
+.settings-card p{
+
+color:#64748b;
+
+}
+
+
+
+.settings-card button{
+
+
+margin-top:20px;
+
+padding:12px 22px;
+font-size:15px;
+font-weight:600;
+border-radius:12px;
+transition:.3s ease;
+
+border:none;
+
+border-radius:10px;
+
+background:#2563eb;
+
+color:white;
+
+cursor:pointer;
+
+
+}
+
+
+
+.status{
+
+display:block;
+
+margin-top:15px;
+
+font-weight:600;
+
+}
+
+
+
+.enabled{
+
+color:green;
+
+
+}
+
+
+.disabled{
+
+color:red;
+
+}
+
+
+
+.modal-backdrop{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.5);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+.settings-modal{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+width:400px;
+
+}
+
+
+
+.settings-modal input{
+
+
+width:100%;
+
+padding:12px;
+
+margin:20px 0;
+
+}
+
+
+
+.modal-buttons{
+
+display:flex;
+
+justify-content:flex-end;
+
+gap:15px;
+
+}
+/* ===============================
+   Change Password Modal
+================================ */
+
+
+.password-modal-overlay{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(15,23,42,0.55);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+
+
+.password-modal{
+
+
+    width:420px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.25);
+
+
+    animation:modalOpen .3s ease;
+
+
+}
+
+
+
+.password-modal h2{
+
+    margin-bottom:25px;
+
+    color:#0f172a;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+
+
+
+.password-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+.password-form label{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#475569;
+
+}
+
+
+
+.password-form input{
+
+
+    width:100%;
+
+    padding:13px 15px;
+
+
+    border:1px solid #cbd5e1;
+
+
+    border-radius:10px;
+
+
+    outline:none;
+
+
+    font-size:15px;
+
+
+    transition:.3s;
+
+}
+
+
+
+.password-form input:focus{
+
+
+    border-color:#2563eb;
+
+
+    box-shadow:
+    0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+
+
+
+.password-actions{
+
+
+    display:flex;
+
+
+    justify-content:flex-end;
+
+
+    gap:15px;
+
+
+    margin-top:25px;
+
+}
+
+
+
+.cancel-password-btn{
+
+
+    padding:12px 20px;
+
+
+    border:none;
+
+
+    border-radius:10px;
+
+
+    background:#e2e8f0;
+
+
+    color:#334155;
+
+
+    cursor:pointer;
+
+
+    font-weight:600;
+
+}
+
+
+
+.cancel-password-btn:hover{
+
+    background:#cbd5e1;
+
+}
+
+
+
+
+.update-password-btn{
+
+
+    padding:12px 22px;
+
+
+    border:none;
+
+
+    border-radius:10px;
+
+
+    background:#2563eb;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+.update-password-btn:hover{
+
+
+    background:#1d4ed8;
+
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* Animation */
+
+@keyframes modalOpen{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px) scale(.95);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+
+}
+
+
+
+
+/* Mobile */
+
+@media(max-width:500px){
+
+
+.password-modal{
+
+width:90%;
+
+padding:25px;
+
+}
+
+
+}
+.settings-card button:hover{
+    transform:translateY(-2px);
+}
+.settings-subtitle{
+
+    color:#64748b;
+
+    margin-top:-10px;
+
+    margin-bottom:35px;
+
+    font-size:15px;
+
+}
+.settings-card p{
+
+    margin-top:12px;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+    
+
+}
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:6px 12px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+    
+
+}
+.enabled{
+
+    background:#dcfce7;
+    
+
+    color:#15803d;
+
+}
+.disabled{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+.settings-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(15,23,42,.12);
+
+}
+@media(max-width:1100px){
+
+.settings-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.settings-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

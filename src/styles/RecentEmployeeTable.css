@@ -1,0 +1,90 @@
+.employee-table-card{
+    flex:1;
+    flex-direction: column;
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    min-height: 420px;
+    
+}
+
+.employee-table-card h2{
+    margin-bottom:20px;
+    
+}
+
+.employee-table-card table{
+    width:100%;
+    border-collapse:collapse;
+  
+}
+
+ .employee-table-card th,
+ .employee-table-card td{
+    padding:14px;
+    text-align:left;
+    border-bottom:1px solid #eee;
+    font-size:20px;
+}
+
+.employee-table-card th{
+    font-weight:700;
+    font-size:22px;
+}
+
+
+
+.pagination-container{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.pagination-container p{
+    color:#6b7280;
+    font-size:14px;
+}
+
+.pagination{
+    display:flex;
+    gap:8px;
+}
+
+.pagination button{
+    width:40px;
+    height:40px;
+    border:1px solid #d1d5db;
+    background:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.active-page{
+    background:#2563eb !important;
+    color:white;
+    border:none;
+}
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+.table-wrapper{
+    flex:1;
+     overflow:auto;
+}
+
+.view-all-btn{
+    border:none;
+    background:#eef2ff;
+    color:#2563eb;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.pagination-container{
+    margin-top:20px;
+}
