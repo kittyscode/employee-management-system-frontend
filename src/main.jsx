@@ -5,7 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import { SearchProvider } from "./context/SearchContext";
 import './index.css'
 import App from './App.jsx'
-import "./styles/theme.css";
+import "./styles/Theme.css";
 
 import "@fontsource/poppins/400"
 import { SidebarProvider } from './context/SidebarContext.jsx';
