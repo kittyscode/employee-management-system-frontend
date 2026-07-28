@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import DepartmentForm from "../../components/departments/DepartmentForm";
-import departmentService from "../../services/departmentService";
+import departmentService from "../../services/DepartmentService";
 
 const EditDepartment = () => {
 
