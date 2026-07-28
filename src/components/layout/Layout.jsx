@@ -3,7 +3,7 @@ import { SidebarContext } from "../../context/SidebarContext";
 
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import "../../styles/layout.css";
+import "../../styles/Layout.css";
 
 const Layout = ({ children }) => {
 
