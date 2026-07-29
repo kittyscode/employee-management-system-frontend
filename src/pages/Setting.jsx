@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../styles/setting.css";
-import ChangePasswordModal from
- "../components/settings/ChangePasswordModal";
+import ChangePasswordModal from "../components/settings/ChangePasswordModal";
 import ThemeModal from "../components/settings/ThemeModal";
 import { toast } from "react-toastify";
 import profileService from "../services/profileService";

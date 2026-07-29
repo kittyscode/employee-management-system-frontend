@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useContext } from "react";
 import { SearchContext } from "../../context/SearchContext";
-import DepartmentTable from "../../components/departments/DepartmentTable";
-import departmentService from "../../services/DepartmentService";
+import DepartmentTable from "../../components/Department/DepartmentTable";
+import departmentService from "../../services/departmentService";
 
 import "../../styles/DepartmentList.css";
 
