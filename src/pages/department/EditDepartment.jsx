@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import DepartmentForm from "../../components/Departments/DepartmentForm.jsx";
+import DepartmentForm from "../../components/Department/DepartmentForm.jsx";
 import departmentService from "../../services/departmentService.js";
 
 const EditDepartment = () => {
