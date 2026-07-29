@@ -11,9 +11,9 @@ import EmployeeList from "./pages/employees/EmployeeList";
 import AddEmployee from "./pages/employees/AddEmployee";
 import EditEmployee from "./pages/employees/EditEmployee";
 
-import DepartmentList from "./pages/departments/DepartmentList";
-import AddDepartment from "./pages/departments/AddDepartment";
-import EditDepartment from "./pages/departments/EditDepartment";
+import DepartmentList from "./pages/department/DepartmentList";
+import AddDepartment from "./pages/department/AddDepartment";
+import EditDepartment from "./pages/department/EditDepartment";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Report from "./pages/Reports";
 import Profile from "./pages/Profile";
