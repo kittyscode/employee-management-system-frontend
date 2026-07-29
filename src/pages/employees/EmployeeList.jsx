@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import employeeService from "../../services/employeeService";
 import EmployeeTable from "../../components/employees/EmployeeTable";
-import "../../styles/EmployeeList.css";
+import "../../styles/employeeList.css";
 import { SearchContext } from "../../context/SearchContext";
 
 const EmployeeList = () => {
