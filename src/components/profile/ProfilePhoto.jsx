@@ -9,7 +9,7 @@ const ProfilePhoto = ({ profile, setProfile }) => {
 
   const [preview, setPreview] = useState(
     profile?.profileImage
-        ? `http://localhost:8082/uploads/profile/${profile.profileImage}`
+        ? `${import.meta.env.VITE_API_BASE_URL}/uploads/profile/${profile.profileImage}`
         : null
 );
 
@@ -37,7 +37,7 @@ const ProfilePhoto = ({ profile, setProfile }) => {
 
 
             const response = await axios.post(
-                "http://localhost:8082/api/profile/upload-image",
+                "${import.meta.env.VITE_API_BASE_URL}/api/profile/upload-image",
                 formData,
                 {
                     headers:{
@@ -57,7 +57,7 @@ const ProfilePhoto = ({ profile, setProfile }) => {
 
 
             const updatedProfile = await axios.get(
-    "http://localhost:8082/api/profile",
+    "${import.meta.env.VITE_API_BASE_URL}/api/profile",
     {
         headers:{
             Authorization:
