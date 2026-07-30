@@ -47,15 +47,15 @@ const fetchReport = async () => {
     setLoading(true);
 
     const reportResponse = await axios.get(
-      "${import.meta.env.VITE_API_BASE_URL}/api/reports/dashboard"
+      `${import.meta.env.VITE_API_BASE_URL}/api/reports/dashboard`
     );
 
     const employeeResponse = await axios.get(
-      "${import.meta.env.VITE_API_BASE_URL}/api/employees"
+      `${import.meta.env.VITE_API_BASE_URL}/api/employees`
     );
 
     const departmentResponse = await axios.get(
-      "${import.meta.env.VITE_API_BASE_URL}/api/departments"
+      `${import.meta.env.VITE_API_BASE_URL}/api/departments`
     );
 
   

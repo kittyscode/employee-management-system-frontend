@@ -31,7 +31,7 @@
 import api from "./api";
 
 const getAllDepartments = () =>
-    api.get("/departments");
+    api.get(`/departments`);
 
 
 const getDepartmentById = (id) =>
