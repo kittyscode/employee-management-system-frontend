@@ -88,3 +88,24 @@
 .pagination-container{
     margin-top:20px;
 }
+@media (max-width: 768px) {
+  .employee-table-card th,
+  .employee-table-card td {
+    font-size: 13px;
+    padding: 8px;
+    white-space: nowrap;
+  }
+
+  .employee-table-card h2 {
+    font-size: 18px;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .employee-table-card table {
+    min-width: 600px;
+  }
+}

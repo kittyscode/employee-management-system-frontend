@@ -309,3 +309,50 @@ color:#777;
 font-size:12px;
 
 }
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.employee-table,
+.department-table {
+  min-width: 700px; /* forces horizontal scroll instead of squishing columns */
+}
+
+@media (max-width: 768px) {
+  .employee-table-card,
+  .department-table-card {
+    padding: 12px;
+  }
+
+  .employee-table th,
+  .employee-table td,
+  .department-table th,
+  .department-table td {
+    padding: 10px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .employee-table-header h2,
+  .department-table-card h2 {
+    font-size: 18px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .pagination-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
