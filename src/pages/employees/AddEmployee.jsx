@@ -8,32 +8,37 @@ const AddEmployee = () => {
     const navigate = useNavigate();
     const location = useLocation();
 const from = location.state?.from || "/employees";
-    const saveEmployee = async (employee) => {
+const saveEmployee = async (employee) => {
 
-        const employeeData = {
-            ...employee,
-            department: {
-                id: employee.departmentId
-            }
-        };
+    console.log("Save clicked", employee);
 
-        delete employeeData.departmentId;
-
-        try {
-
-            await employeeService.createEmployee(employeeData);
-
-            toast.success("Employee added successfully!");
-            navigate("/employees");
-
-        } catch (error) {
-
-            console.error(error);
-
-        }
-
+    const employeeData = {
+        ...employee,
+        departmentId: Number(employee.departmentId),
+        salary: Number(employee.salary)
     };
 
+    try {
+
+        console.log("Sending:", employeeData);
+
+        await employeeService.createEmployee(employeeData);
+
+        toast.success("Employee added successfully!");
+
+        navigate("/employees");
+
+    } catch (error) {
+
+    console.error("Create Employee Error:", error);
+
+    console.error(error.response?.data);
+
+    toast.error(
+        error.response?.data?.message || "Failed to add employee"
+    );
+}
+};
     return (
 
         <div>
