@@ -7,7 +7,7 @@ const AddEmployee = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-const from = location.state?.from || "/employees";
+const from = location.state?.from || "/employees/add";
 const saveEmployee = async (employee) => {
     try {
 
