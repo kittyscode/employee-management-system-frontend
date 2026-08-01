@@ -1,6 +1,21 @@
 import { useState } from "react";
 import "../../styles/EmployeeForm.css";
 import { useEffect } from "react";
+import departmentService from "../../services/departmentService";
+const [departments, setDepartments] = useState([]);
+
+useEffect(() => {
+    loadDepartments();
+}, []);
+
+const loadDepartments = async () => {
+    try {
+        const response = await departmentService.getAllDepartments();
+        setDepartments(response.data);
+    } catch (error) {
+        console.error(error);
+    }
+};
 const EmployeeForm = ({onCancel, onSubmit,initialData=null,title="Add Employee" ,buttonText="Save Employee"}) => {
 
   const [employee, setEmployee] = useState(
@@ -134,10 +149,16 @@ useEffect(() => {
                         value={employee.departmentId}
                         onChange={handleChange}
                     >
-                        <option value="">Select Department</option>
-                        <option value="1">IT</option>
-                        <option value="2">HR</option>
-                        <option value="3">Finance</option>
+                       <option value="">Select Department</option>
+
+{departments.map((department) => (
+    <option
+        key={department.id}
+        value={department.id}
+    >
+        {department.departmentName}
+    </option>
+))}
                     </select>
                 </div>
                 <div className="form-group">
