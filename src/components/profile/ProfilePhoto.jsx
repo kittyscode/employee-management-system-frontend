@@ -37,7 +37,7 @@ const ProfilePhoto = ({ profile, setProfile }) => {
 
 
             const response = await axios.post(
-                "${import.meta.env.VITE_API_BASE_URL}/profile/upload-image",
+                `${import.meta.env.VITE_API_BASE_URL}/profile/upload-image`,
                 formData,
                 {
                     headers:{
@@ -57,7 +57,7 @@ const ProfilePhoto = ({ profile, setProfile }) => {
 
 
             const updatedProfile = await axios.get(
-    "${import.meta.env.VITE_API_BASE_URL}/profile",
+    `${import.meta.env.VITE_API_BASE_URL}/profile`,
     {
         headers:{
             Authorization:
