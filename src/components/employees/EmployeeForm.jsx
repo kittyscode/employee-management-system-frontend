@@ -2,20 +2,7 @@ import { useState } from "react";
 import "../../styles/EmployeeForm.css";
 import { useEffect } from "react";
 import departmentService from "../../services/departmentService";
-const [departments, setDepartments] = useState([]);
 
-useEffect(() => {
-    loadDepartments();
-}, []);
-
-const loadDepartments = async () => {
-    try {
-        const response = await departmentService.getAllDepartments();
-        setDepartments(response.data);
-    } catch (error) {
-        console.error(error);
-    }
-};
 const EmployeeForm = ({onCancel, onSubmit,initialData=null,title="Add Employee" ,buttonText="Save Employee"}) => {
 
   const [employee, setEmployee] = useState(
@@ -47,7 +34,20 @@ useEffect(() => {
         }));
     };
 
-    
+    const [departments, setDepartments] = useState([]);
+
+useEffect(() => {
+    loadDepartments();
+}, []);
+
+const loadDepartments = async () => {
+    try {
+        const response = await departmentService.getAllDepartments();
+        setDepartments(response.data);
+    } catch (error) {
+        console.error(error);
+    }
+};
     const handleSubmit = (e) => {
 
         e.preventDefault();
