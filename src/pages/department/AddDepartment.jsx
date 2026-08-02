@@ -8,6 +8,7 @@ const AddDepartment = () => {
   const navigate = useNavigate();
   const location = useLocation();
 const from = location.state?.from || "/departments";
+console.log("From:", from);
   const saveDepartment = async (department) => {
 
     try {

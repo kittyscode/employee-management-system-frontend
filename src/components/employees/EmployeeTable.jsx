@@ -43,7 +43,7 @@ employees.map((employee)=>(
         {employee.profileImage ? (
 
             <img
-                src={`${import.meta.env.VITE_API_BASE_URL}/uploads/profile/${employee.profileImage}`}
+               src={`${import.meta.env.VITE_API_BASE_URL.replace("/api", "")}/uploads/profile/${employee.profileImage}`}
                 alt={employee.name}
                 className="employee-avatar"
             />

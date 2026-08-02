@@ -184,19 +184,23 @@ Inactive
 </div>
 <div className="form-group">
   <label>Profile Image</label>
-  <input
+<input
     type="file"
     accept="image/*"
     onChange={(e) => {
-      const file = e.target.files[0];
-      if (file) {
-        setEmployee((prev) => ({
-          ...prev,
-          profileImageFile: file, // store the actual File object
-        }));
-      }
+
+        const file = e.target.files[0];
+
+        if (file) {
+
+            setEmployee(prev => ({
+                ...prev,
+                profileImageFile: file
+            }));
+
+        }
     }}
-  />
+/>
 </div>
 
   <div className="form-buttons">

@@ -44,7 +44,17 @@ const employeeService = {
             }
         );
     },
-
+uploadImage(formData) {
+    return axios.post(
+        `${BASE_URL}/upload-image`,
+        formData,
+        {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        }
+    );
+},
    searchEmployees(keyword) {
     return axios.get(`${BASE_URL}/search?keyword=${keyword}`);
 }

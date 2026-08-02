@@ -7,19 +7,32 @@ const AddEmployee = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-const from = location.state?.from || "/employees/add";
+const from = location.state?.from || "/employees";
 const saveEmployee = async (employee) => {
     try {
 
-        console.log("🔥 saveEmployee called");
+        let profileImage = "";
 
+        // Upload image first
+        if (employee.profileImageFile) {
+
+            const formData = new FormData();
+
+            formData.append("file", employee.profileImageFile);
+
+            const uploadResponse =
+                await employeeService.uploadImage(formData);
+
+            profileImage = uploadResponse.data.fileName;
+        }
+
+        // Prepare employee data
         const employeeData = {
             ...employee,
+            profileImage,
             departmentId: Number(employee.departmentId),
             salary: Number(employee.salary)
         };
-
-        console.log("🔥 Sending", employeeData);
 
         await employeeService.createEmployee(employeeData);
 
@@ -29,7 +42,7 @@ const saveEmployee = async (employee) => {
 
     } catch (error) {
 
-        console.log(error.response?.data);
+        console.error(error);
 
         toast.error("Failed to save employee");
     }
