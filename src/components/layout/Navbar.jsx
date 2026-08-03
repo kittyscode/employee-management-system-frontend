@@ -90,10 +90,8 @@ const loadProfile = async()=>{
 
 src={
  profile?.profileImage
- ?
-`${import.meta.env.VITE_API_BASE_URL}/uploads/profile/${profile.profileImage}`
- :
- `https://ui-avatars.com/?name=${profile?.fullName || "User"}`
+ ? `${import.meta.env.VITE_API_BASE_URL.replace("/api","")}/uploads/profile/${profile.profileImage}`
+ : `https://ui-avatars.com/?name=${profile?.fullName || "User"}`
 }
 alt="Profile"
 
