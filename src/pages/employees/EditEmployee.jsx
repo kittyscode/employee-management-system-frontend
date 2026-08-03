@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import { useLocation } from "react-router-dom";
 import EmployeeForm from "../../components/employees/EmployeeForm";
 import employeeService from "../../services/employeeService";
 import "../../styles/EditEmployee.css"
@@ -14,7 +14,8 @@ const EditEmployee = () => {
     const [employee, setEmployee] = useState(null);
 
     const [loading, setLoading] = useState(true);
-
+    const location = useLocation();
+const from = location.state?.from || "/employees";
     useEffect(() => {
         fetchEmployee();
     }, []);
@@ -81,6 +82,7 @@ const EditEmployee = () => {
             onSubmit={updateEmployee}
             title="Edit Employee"
             buttonText="Update Employee"
+            onCancel={() => navigate(from)}
         />
 
     );
