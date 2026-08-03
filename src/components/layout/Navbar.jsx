@@ -22,11 +22,12 @@ import { SidebarContext } from "../../context/SidebarContext";
 
 const navigate = useNavigate();
 const Navbar = () => {
-
 const { searchText, setSearchText } = useContext(SearchContext);
 
+const { sidebarOpen, setSidebarOpen } =
+    useContext(SidebarContext);
 const [profile,setProfile] = useState(null);
-const { sidebarOpen, setSidebarOpen } = useContext(SidebarContext);
+
 const [showMenu, setShowMenu] = useState(false);
 useEffect(()=>{
 
