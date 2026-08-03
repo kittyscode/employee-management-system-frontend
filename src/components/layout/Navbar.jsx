@@ -66,11 +66,7 @@ const loadProfile = async()=>{
 >
     <FaBars />
 </div>
-<div className="company-name">
 
-    EMS Portal
-
-</div>
       {/* Search Box */}
       <div className="search-box">
         <FaSearch className="search-icon" />
