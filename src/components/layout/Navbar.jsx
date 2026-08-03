@@ -14,18 +14,20 @@ import { useContext } from "react";
 import { SearchContext } from "../../context/SearchContext";
 
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import profileService from "../../services/profileService";
 import "../../styles/Navbar.css";
 import { SidebarContext } from "../../context/SidebarContext";
+import { useNavigate } from "react-router-dom";
 
 
-const navigate = useNavigate();
 const Navbar = () => {
-const { searchText, setSearchText } = useContext(SearchContext);
+const navigate = useNavigate();
+  const { searchText, setSearchText } =
+        useContext(SearchContext);
 
-const { sidebarOpen, setSidebarOpen } =
-    useContext(SidebarContext);
+    const { sidebarOpen, setSidebarOpen } =
+        useContext(SidebarContext);
 const [profile,setProfile] = useState(null);
 
 const [showMenu, setShowMenu] = useState(false);
