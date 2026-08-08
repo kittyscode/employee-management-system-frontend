@@ -1,16 +1,73 @@
-# React + Vite
+# Employee Management System — Backend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A RESTful backend application for managing employees, departments, and organizational reports.
 
-Currently, two official plugins are available:
+The application is built using **Java, Spring Boot, Spring Data JPA, Hibernate, and MySQL** and provides REST APIs that are consumed by a React frontend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The Employee Management System backend provides APIs for managing employee and department information.
 
-## Expanding the ESLint configuration
+The application currently supports:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Employee CRUD operations
+- Department CRUD operations
+- Employee status management
+- Department assignment
+- Employee pagination
+- Dashboard statistics
+- Total payroll calculation
+- MySQL database integration
+- REST API integration with React frontend
+- CORS configuration
+
+---
+
+## ✨ Key Features
+
+### 👨‍💼 Employee Management
+
+- Add employee
+- View all employees
+- View employee by ID
+- Update employee
+- Delete employee
+- Pagination
+- Employee status management
+
+Employee information includes:
+
+- Name
+- Email
+- Salary
+- Department
+- Status
+- Joining date
+
+---
+
+### 🏢 Department Management
+
+- Add department
+- View all departments
+- View department by ID
+- Update department
+- Delete department
+- Assign employees to departments
+
+---
+
+### 📊 Dashboard Reports
+
+The backend provides dashboard statistics including:
+
+- Total employees
+- Total departments
+- Active employees
+- Total payroll
+
+Example API:
+
+GET /api/reports/dashboard
