@@ -1,41 +1,60 @@
-# Employee Management System — Backend
+# Employee Management System — Frontend
 
-A RESTful backend application for managing employees, departments, and organizational reports.
+A modern and responsive **Employee Management System frontend** built using React and Vite.
 
-The application is built using **Java, Spring Boot, Spring Data JPA, Hibernate, and MySQL** and provides REST APIs that are consumed by a React frontend.
+The application provides a dashboard interface for managing employees and departments and viewing organizational reports. It communicates with a Spring Boot REST API using Axios.
 
 ---
 
 ## 🚀 Project Overview
 
-The Employee Management System backend provides APIs for managing employee and department information.
+The Employee Management System frontend provides an admin-style interface for managing employee information and organizational data.
 
-The application currently supports:
+### Main Features
 
-- Employee CRUD operations
-- Department CRUD operations
-- Employee status management
+- Dashboard
+- Employee management
+- Department management
+- Employee search
+- Employee status
 - Department assignment
 - Employee pagination
-- Dashboard statistics
-- Total payroll calculation
-- MySQL database integration
-- REST API integration with React frontend
-- CORS configuration
+- Reports and statistics
+- Total payroll overview
+- REST API integration
+- Responsive user interface
 
 ---
 
 ## ✨ Key Features
 
+### 📊 Dashboard
+
+The dashboard provides an overview of the organization.
+
+It displays:
+
+- Total employees
+- Total departments
+- Active employees
+- Total payroll
+
+---
+
 ### 👨‍💼 Employee Management
 
+The employee module allows users to manage employee records.
+
+Features include:
+
+- View employees
 - Add employee
-- View all employees
-- View employee by ID
-- Update employee
+- Edit employee
 - Delete employee
+- Search employees
 - Pagination
-- Employee status management
+- Employee status
+- Department assignment
 
 Employee information includes:
 
@@ -50,24 +69,77 @@ Employee information includes:
 
 ### 🏢 Department Management
 
+The department module allows users to manage organizational departments.
+
+Features include:
+
+- View departments
 - Add department
-- View all departments
-- View department by ID
-- Update department
+- Edit department
 - Delete department
 - Assign employees to departments
 
 ---
 
-### 📊 Dashboard Reports
+### 📈 Reports
 
-The backend provides dashboard statistics including:
+The Reports section provides organizational statistics retrieved from the backend API.
+
+The dashboard includes:
 
 - Total employees
 - Total departments
 - Active employees
 - Total payroll
 
-Example API:
+---
 
-GET /api/reports/dashboard
+## 🛠️ Technology Stack
+
+### Frontend
+
+- React
+- JavaScript
+- JSX
+- Vite
+- React Router
+- CSS3
+
+### Libraries
+
+- Axios — API communication
+- React Icons — UI icons
+- Recharts — charts and data visualization
+
+### Tools
+
+- VS Code
+- npm
+- Git
+- GitHub
+- Postman
+
+---
+
+## 🏗️ Application Architecture
+
+```text
+React Frontend
+      │
+      ▼
+   Pages
+      │
+      ▼
+Reusable Components
+      │
+      ▼
+  Service Layer
+      │
+      ▼
+    Axios
+      │
+      ▼
+Spring Boot REST API
+      │
+      ▼
+    MySQL
