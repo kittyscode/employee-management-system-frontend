@@ -23,7 +23,7 @@ const ProfessionalInfoCard = ({ profile }) => {
 
                     <label>Employee ID</label>
 
-                    <p>{profile.employeeId}</p>
+                   <p>{profile.employeeId || "N/A"}</p>
 
                 </div>
 
@@ -37,7 +37,7 @@ const ProfessionalInfoCard = ({ profile }) => {
 
                     <label>Designation</label>
 
-                    <p>{profile.designation}</p>
+                    <p>{profile.designation || "N/A"}</p>
 
                 </div>
 
@@ -51,7 +51,7 @@ const ProfessionalInfoCard = ({ profile }) => {
 
                     <label>Department</label>
 
-                    <p>{profile.department}</p>
+                   <p>{profile.department || "N/A"}</p>
 
                 </div>
 
@@ -65,7 +65,11 @@ const ProfessionalInfoCard = ({ profile }) => {
 
                     <label>Joining Date</label>
 
-                    <p>{profile.joiningDate}</p>
+                    <p>
+  {profile.joiningDate
+    ? new Date(profile.joiningDate).toLocaleDateString()
+    : "N/A"}
+</p>
 
                 </div>
 

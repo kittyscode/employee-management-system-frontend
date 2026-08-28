@@ -50,9 +50,7 @@ const ProfilePhoto = ({ profile, setProfile }) => {
                 }
             );
 
-            setPreview(
-                response.data.imageUrl
-            );
+         setPreview(`${import.meta.env.VITE_API_BASE_URL}/uploads/profile/${response.data.imageUrl}`);
 
 
 
@@ -92,13 +90,11 @@ setProfile(updatedProfile.data);
 
             <img
 
-                src={
-                    preview
-                    ?
-                    preview
-                    :
-                    `https://ui-avatars.com/?name=${profile.fullName}`
-                }
+               src={
+    preview
+        ? preview
+        : `https://ui-avatars.com/api/?name=${encodeURIComponent(profile.fullName)}&background=random`
+}
 
                 className="profile-photo"
 

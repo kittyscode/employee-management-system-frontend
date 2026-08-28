@@ -3,18 +3,14 @@
 =========================== */
 
 .navbar{
-    width:100%;
-    min-height:70px;
-    background:#ffffff;
+    height:70px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:20px;
     padding:0 25px;
+    background:#fff;
     box-shadow:0 2px 10px rgba(0,0,0,.08);
-    position:sticky;
-    top:0;
-    left:0;
-    z-index:1000;
 }
 /* ===========================
    LEFT SECTION
@@ -35,40 +31,33 @@
     letter-spacing:.5px;
 }
 
-/* ===========================
-   SEARCH BOX
-=========================== */
-
 .search-box{
-    flex:1;
-    max-width:550px;
-    margin:0 40px;
-    position:relative;
-}
-.search-box input{
-    width:100%;
-    height:44px;
-    border:none;
-    outline:none;
-    border-radius:25px;
-    background:#f3f4f6;
-    padding-left:45px;
-    padding-right:20px;
-    font-size:15px;
-    transition:.3s;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
 }
 
-.search-box input:focus{
-    background:#ffffff;
-    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+.search-box input{
+    width: 100%;
+    height: 44px;
+    padding: 8px 12px 8px 40px;  /* Space for the icon */
+    border: none;
+    border-radius: 25px;
+    background: #f3f4f6;
+    font-size: 15px;
+    outline: none;    
+  
 }
 
 .search-icon{
-    position:absolute;
-    left:18px;
-    top:50%;
-    transform:translateY(-50%);
-    color:#888;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    z-index: 2;
 }
 
 /* ===========================
@@ -78,7 +67,8 @@
 .navbar-right{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:15px;
+    flex-shrink:0;
 }
 
 /* ===========================
@@ -136,6 +126,7 @@
     padding:5px 10px;
     border-radius:10px;
     transition:.3s;
+    flex-shrink:0;
 }
 
 .profile:hover{
@@ -253,4 +244,56 @@
         padding:0 15px;
     }
 
+}
+.nav-icon {
+    position: relative;
+}
+
+.dropdown-panel {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 320px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    z-index: 100;
+}
+
+.dropdown-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-panel-header span {
+    font-size: 12px;
+    color: #4f46e5;
+    cursor: pointer;
+}
+
+.dropdown-panel-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+}
+
+.dropdown-panel-item.unread {
+    background: #f0f4ff;
+}
+
+.dropdown-panel-item .time {
+    font-size: 11px;
+    color: #999;
+}
+
+.empty-state {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    font-size: 13px;
 }

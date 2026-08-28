@@ -10,11 +10,12 @@ import "./styles/Theme.css";
 import "@fontsource/poppins/400"
 import { SidebarProvider } from './context/SidebarContext.jsx';
 
-
+import { NotificationProvider } from "./context/NotificationContext";
 
 
 createRoot(document.getElementById('root')).render(
  <StrictMode>
+  <NotificationProvider>
  <SearchProvider>
  
       <BrowserRouter>
@@ -29,5 +30,6 @@ createRoot(document.getElementById('root')).render(
       />
     
     </SearchProvider>
+    </NotificationProvider>
     </StrictMode>
     )

@@ -89,37 +89,34 @@ import "../../styles/Profile.css";
 
 const ProfileStatus = ({ profile }) => {
 
-    const stats = [
-
-        {
-            id: 1,
-            title: "Department",
-            value: profile.department,
-            icon: <FaBuilding />
-        },
-
-        {
-            id: 2,
-            title: "Role",
-            value: profile.role,
-            icon: <FaUserTie />
-        },
-
-        {
-            id: 3,
-            title: "Joining Date",
-            value: profile.joiningDate,
-            icon: <FaCalendarAlt />
-        },
-
-        {
-            id: 4,
-            title: "Status",
-            value: profile.status,
-            icon: <FaUserCheck />
-        }
-
-    ];
+  const stats = [
+    {
+        id: 1,
+        title: "Department",
+        value: profile?.department || "N/A",
+        icon: <FaBuilding />
+    },
+    {
+        id: 2,
+        title: "Role",
+        value: profile?.role || "N/A",
+        icon: <FaUserTie />
+    },
+    {
+        id: 3,
+        title: "Joining Date",
+        value: profile?.joiningDate
+            ? new Date(profile.joiningDate).toLocaleDateString()
+            : "N/A",
+        icon: <FaCalendarAlt />
+    },
+    {
+        id: 4,
+        title: "Status",
+        value: profile?.status || "N/A",
+        icon: <FaUserCheck />
+    }
+];
 
     return (
 
